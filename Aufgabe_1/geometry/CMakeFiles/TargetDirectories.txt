@@ -1,0 +1,4 @@
+/mnt/c/Users/julyt/Uni/5.Semester/Computergrafik/Computergrafik_Lab/Aufgabe_1/geometry/CMakeFiles/math_test.dir
+/mnt/c/Users/julyt/Uni/5.Semester/Computergrafik/Computergrafik_Lab/Aufgabe_1/geometry/CMakeFiles/geometry_test.dir
+/mnt/c/Users/julyt/Uni/5.Semester/Computergrafik/Computergrafik_Lab/Aufgabe_1/geometry/CMakeFiles/edit_cache.dir
+/mnt/c/Users/julyt/Uni/5.Semester/Computergrafik/Computergrafik_Lab/Aufgabe_1/geometry/CMakeFiles/rebuild_cache.dir
