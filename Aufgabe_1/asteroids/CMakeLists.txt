@@ -14,11 +14,18 @@ find_package(SDL2_mixer REQUIRED)
 
 # --- Dein Hauptprogramm ---
 add_executable(main_game game.cc math.cc geometry.cc sdl2_renderer.cc sound.cc main_game.cc physics.cc sdl2_game_controller.cc timer.cc)
-# Verwendet die modernen CMake-Ziele, die von find_package bereitgestellt werden
-target_link_libraries(main_game PRIVATE SDL2::SDL2 SDL2::SDL2_mixer)
+
+# NEU: Die "alten" Include-Pfade für SDL2_mixer hinzufügen
+target_include_directories(main_game PRIVATE ${SDL2_MIXER_INCLUDE_DIRS})
+
+# NEU: Die Bibliotheken verlinken (SDL2 modern, SDL2_mixer alt)
+target_link_libraries(main_game PRIVATE
+    SDL2::SDL2
+    ${SDL2_MIXER_LIBRARIES}
+)
 
 
-# --- Deine Tests ---
+# Tests ---
 enable_testing()
 add_executable(math_test math_test.cc math.cc)
 target_link_libraries(math_test PRIVATE gtest gtest_main)
