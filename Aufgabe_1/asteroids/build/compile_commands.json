@@ -1,151 +1,151 @@
 [
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/main_game.dir/game.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/main_game.dir/game.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game.cc",
   "output": "CMakeFiles/main_game.dir/game.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/main_game.dir/math.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/main_game.dir/math.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc",
   "output": "CMakeFiles/main_game.dir/math.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/main_game.dir/geometry.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/main_game.dir/geometry.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc",
   "output": "CMakeFiles/main_game.dir/geometry.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/main_game.dir/sdl2_renderer.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/sdl2_renderer.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/main_game.dir/sdl2_renderer.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/sdl2_renderer.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/sdl2_renderer.cc",
   "output": "CMakeFiles/main_game.dir/sdl2_renderer.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/main_game.dir/sound.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/sound.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/main_game.dir/sound.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/sound.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/sound.cc",
   "output": "CMakeFiles/main_game.dir/sound.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/main_game.dir/main_game.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/main_game.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/main_game.dir/main_game.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/main_game.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/main_game.cc",
   "output": "CMakeFiles/main_game.dir/main_game.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/main_game.dir/physics.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/main_game.dir/physics.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics.cc",
   "output": "CMakeFiles/main_game.dir/physics.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/main_game.dir/sdl2_game_controller.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/sdl2_game_controller.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/main_game.dir/sdl2_game_controller.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/sdl2_game_controller.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/sdl2_game_controller.cc",
   "output": "CMakeFiles/main_game.dir/sdl2_game_controller.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/main_game.dir/timer.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/timer.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/main_game.dir/timer.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/timer.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/timer.cc",
   "output": "CMakeFiles/main_game.dir/timer.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++   -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/math_test.dir/math_test.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math_test.cc",
+  "command": "/usr/bin/c++   -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/math_test.dir/math_test.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math_test.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math_test.cc",
   "output": "CMakeFiles/math_test.dir/math_test.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++   -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/math_test.dir/math.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc",
+  "command": "/usr/bin/c++   -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/math_test.dir/math.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc",
   "output": "CMakeFiles/math_test.dir/math.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++   -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/geometry_test.dir/geometry_test.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry_test.cc",
+  "command": "/usr/bin/c++   -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/geometry_test.dir/geometry_test.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry_test.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry_test.cc",
   "output": "CMakeFiles/geometry_test.dir/geometry_test.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++   -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/geometry_test.dir/geometry.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc",
+  "command": "/usr/bin/c++   -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/geometry_test.dir/geometry.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc",
   "output": "CMakeFiles/geometry_test.dir/geometry.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++   -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/geometry_test.dir/math.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc",
+  "command": "/usr/bin/c++   -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/geometry_test.dir/math.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc",
   "output": "CMakeFiles/geometry_test.dir/math.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/physics_test.dir/physics_test.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics_test.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/physics_test.dir/physics_test.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics_test.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics_test.cc",
   "output": "CMakeFiles/physics_test.dir/physics_test.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/physics_test.dir/physics.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/physics_test.dir/physics.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics.cc",
   "output": "CMakeFiles/physics_test.dir/physics.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/physics_test.dir/geometry.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/physics_test.dir/geometry.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc",
   "output": "CMakeFiles/physics_test.dir/geometry.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/physics_test.dir/math.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/physics_test.dir/math.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc",
   "output": "CMakeFiles/physics_test.dir/math.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/physics_test.dir/timer.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/timer.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/physics_test.dir/timer.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/timer.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/timer.cc",
   "output": "CMakeFiles/physics_test.dir/timer.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/game_test.dir/game_test.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game_test.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/game_test.dir/game_test.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game_test.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game_test.cc",
   "output": "CMakeFiles/game_test.dir/game_test.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/game_test.dir/game.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/game_test.dir/game.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game.cc",
   "output": "CMakeFiles/game_test.dir/game.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/game_test.dir/physics.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/game_test.dir/physics.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics.cc",
   "output": "CMakeFiles/game_test.dir/physics.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/game_test.dir/geometry.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/game_test.dir/geometry.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc",
   "output": "CMakeFiles/game_test.dir/geometry.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/game_test.dir/math.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/game_test.dir/math.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc",
   "output": "CMakeFiles/game_test.dir/math.cc.o"
 },
 {
   "directory": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/game_test.dir/timer.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/timer.cc",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -std=gnu++20 -g -Wall -Wextra -Wpedantic -Wl,--stack,16777216 -o CMakeFiles/game_test.dir/timer.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/timer.cc",
   "file": "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/timer.cc",
   "output": "CMakeFiles/game_test.dir/timer.cc.o"
 }

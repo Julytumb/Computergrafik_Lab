@@ -73,85 +73,85 @@ CMakeFiles/game_test.dir/game_test.cc.o: CMakeFiles/game_test.dir/flags.make
 CMakeFiles/game_test.dir/game_test.cc.o: /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game_test.cc
 CMakeFiles/game_test.dir/game_test.cc.o: CMakeFiles/game_test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/game_test.dir/game_test.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_test.dir/game_test.cc.o -MF CMakeFiles/game_test.dir/game_test.cc.o.d -o CMakeFiles/game_test.dir/game_test.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game_test.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_test.dir/game_test.cc.o -MF CMakeFiles/game_test.dir/game_test.cc.o.d -o CMakeFiles/game_test.dir/game_test.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game_test.cc
 
 CMakeFiles/game_test.dir/game_test.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/game_test.dir/game_test.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game_test.cc > CMakeFiles/game_test.dir/game_test.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game_test.cc > CMakeFiles/game_test.dir/game_test.cc.i
 
 CMakeFiles/game_test.dir/game_test.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/game_test.dir/game_test.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game_test.cc -o CMakeFiles/game_test.dir/game_test.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game_test.cc -o CMakeFiles/game_test.dir/game_test.cc.s
 
 CMakeFiles/game_test.dir/game.cc.o: CMakeFiles/game_test.dir/flags.make
 CMakeFiles/game_test.dir/game.cc.o: /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game.cc
 CMakeFiles/game_test.dir/game.cc.o: CMakeFiles/game_test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/game_test.dir/game.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_test.dir/game.cc.o -MF CMakeFiles/game_test.dir/game.cc.o.d -o CMakeFiles/game_test.dir/game.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_test.dir/game.cc.o -MF CMakeFiles/game_test.dir/game.cc.o.d -o CMakeFiles/game_test.dir/game.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game.cc
 
 CMakeFiles/game_test.dir/game.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/game_test.dir/game.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game.cc > CMakeFiles/game_test.dir/game.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game.cc > CMakeFiles/game_test.dir/game.cc.i
 
 CMakeFiles/game_test.dir/game.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/game_test.dir/game.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game.cc -o CMakeFiles/game_test.dir/game.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/game.cc -o CMakeFiles/game_test.dir/game.cc.s
 
 CMakeFiles/game_test.dir/physics.cc.o: CMakeFiles/game_test.dir/flags.make
 CMakeFiles/game_test.dir/physics.cc.o: /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics.cc
 CMakeFiles/game_test.dir/physics.cc.o: CMakeFiles/game_test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/game_test.dir/physics.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_test.dir/physics.cc.o -MF CMakeFiles/game_test.dir/physics.cc.o.d -o CMakeFiles/game_test.dir/physics.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_test.dir/physics.cc.o -MF CMakeFiles/game_test.dir/physics.cc.o.d -o CMakeFiles/game_test.dir/physics.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics.cc
 
 CMakeFiles/game_test.dir/physics.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/game_test.dir/physics.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics.cc > CMakeFiles/game_test.dir/physics.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics.cc > CMakeFiles/game_test.dir/physics.cc.i
 
 CMakeFiles/game_test.dir/physics.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/game_test.dir/physics.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics.cc -o CMakeFiles/game_test.dir/physics.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/physics.cc -o CMakeFiles/game_test.dir/physics.cc.s
 
 CMakeFiles/game_test.dir/geometry.cc.o: CMakeFiles/game_test.dir/flags.make
 CMakeFiles/game_test.dir/geometry.cc.o: /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc
 CMakeFiles/game_test.dir/geometry.cc.o: CMakeFiles/game_test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/game_test.dir/geometry.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_test.dir/geometry.cc.o -MF CMakeFiles/game_test.dir/geometry.cc.o.d -o CMakeFiles/game_test.dir/geometry.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_test.dir/geometry.cc.o -MF CMakeFiles/game_test.dir/geometry.cc.o.d -o CMakeFiles/game_test.dir/geometry.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc
 
 CMakeFiles/game_test.dir/geometry.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/game_test.dir/geometry.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc > CMakeFiles/game_test.dir/geometry.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc > CMakeFiles/game_test.dir/geometry.cc.i
 
 CMakeFiles/game_test.dir/geometry.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/game_test.dir/geometry.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc -o CMakeFiles/game_test.dir/geometry.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/geometry.cc -o CMakeFiles/game_test.dir/geometry.cc.s
 
 CMakeFiles/game_test.dir/math.cc.o: CMakeFiles/game_test.dir/flags.make
 CMakeFiles/game_test.dir/math.cc.o: /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc
 CMakeFiles/game_test.dir/math.cc.o: CMakeFiles/game_test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/game_test.dir/math.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_test.dir/math.cc.o -MF CMakeFiles/game_test.dir/math.cc.o.d -o CMakeFiles/game_test.dir/math.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_test.dir/math.cc.o -MF CMakeFiles/game_test.dir/math.cc.o.d -o CMakeFiles/game_test.dir/math.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc
 
 CMakeFiles/game_test.dir/math.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/game_test.dir/math.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc > CMakeFiles/game_test.dir/math.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc > CMakeFiles/game_test.dir/math.cc.i
 
 CMakeFiles/game_test.dir/math.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/game_test.dir/math.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc -o CMakeFiles/game_test.dir/math.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc -o CMakeFiles/game_test.dir/math.cc.s
 
 CMakeFiles/game_test.dir/timer.cc.o: CMakeFiles/game_test.dir/flags.make
 CMakeFiles/game_test.dir/timer.cc.o: /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/timer.cc
 CMakeFiles/game_test.dir/timer.cc.o: CMakeFiles/game_test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/game_test.dir/timer.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_test.dir/timer.cc.o -MF CMakeFiles/game_test.dir/timer.cc.o.d -o CMakeFiles/game_test.dir/timer.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/timer.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_test.dir/timer.cc.o -MF CMakeFiles/game_test.dir/timer.cc.o.d -o CMakeFiles/game_test.dir/timer.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/timer.cc
 
 CMakeFiles/game_test.dir/timer.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/game_test.dir/timer.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/timer.cc > CMakeFiles/game_test.dir/timer.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/timer.cc > CMakeFiles/game_test.dir/timer.cc.i
 
 CMakeFiles/game_test.dir/timer.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/game_test.dir/timer.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/timer.cc -o CMakeFiles/game_test.dir/timer.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/timer.cc -o CMakeFiles/game_test.dir/timer.cc.s
 
 # Object files for target game_test
 game_test_OBJECTS = \

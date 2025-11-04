@@ -1,0 +1,8 @@
+/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/CMakeFiles/main_game.dir
+/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/CMakeFiles/math_test.dir
+/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/CMakeFiles/geometry_test.dir
+/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/CMakeFiles/physics_test.dir
+/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/CMakeFiles/game_test.dir
+/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/CMakeFiles/test.dir
+/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/CMakeFiles/edit_cache.dir
+/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/CMakeFiles/rebuild_cache.dir

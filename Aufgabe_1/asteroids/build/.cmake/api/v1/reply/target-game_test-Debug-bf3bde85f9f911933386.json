@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "geometry_test"
+			"path" : "game_test"
 		}
 	],
 	"backtrace" : 1,
@@ -12,7 +12,8 @@
 		[
 			"add_executable",
 			"target_link_libraries",
-			"add_compile_options"
+			"add_compile_options",
+			"target_include_directories"
 		],
 		"files" : 
 		[
@@ -26,19 +27,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 33,
+				"line" : 40,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 34,
+				"line" : 42,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
 				"line" : 7,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 41,
 				"parent" : 0
 			}
 		]
@@ -72,6 +79,14 @@
 					"fragment" : "-Wl,--stack,16777216"
 				}
 			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"isSystem" : true,
+					"path" : "/usr/include/SDL2"
+				}
+			],
 			"language" : "CXX",
 			"languageStandard" : 
 			{
@@ -85,11 +100,14 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3,
+				4,
+				5
 			]
 		}
 	],
-	"id" : "geometry_test::@6890427a1f51a3e7e1df",
+	"id" : "game_test::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -111,12 +129,17 @@
 				"backtrace" : 2,
 				"fragment" : "-lgtest_main",
 				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libSDL2.so",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "geometry_test",
-	"nameOnDisk" : "geometry_test",
+	"name" : "game_test",
+	"nameOnDisk" : "game_test",
 	"paths" : 
 	{
 		"build" : ".",
@@ -130,7 +153,10 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3,
+				4,
+				5
 			]
 		}
 	],
@@ -139,7 +165,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "geometry_test.cc",
+			"path" : "game_test.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "game.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "physics.cc",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -152,6 +190,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "math.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "timer.cc",
 			"sourceGroupIndex" : 0
 		}
 	],

@@ -73,29 +73,29 @@ CMakeFiles/math_test.dir/math_test.cc.o: CMakeFiles/math_test.dir/flags.make
 CMakeFiles/math_test.dir/math_test.cc.o: /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math_test.cc
 CMakeFiles/math_test.dir/math_test.cc.o: CMakeFiles/math_test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/math_test.dir/math_test.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/math_test.dir/math_test.cc.o -MF CMakeFiles/math_test.dir/math_test.cc.o.d -o CMakeFiles/math_test.dir/math_test.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math_test.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/math_test.dir/math_test.cc.o -MF CMakeFiles/math_test.dir/math_test.cc.o.d -o CMakeFiles/math_test.dir/math_test.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math_test.cc
 
 CMakeFiles/math_test.dir/math_test.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/math_test.dir/math_test.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math_test.cc > CMakeFiles/math_test.dir/math_test.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math_test.cc > CMakeFiles/math_test.dir/math_test.cc.i
 
 CMakeFiles/math_test.dir/math_test.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/math_test.dir/math_test.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math_test.cc -o CMakeFiles/math_test.dir/math_test.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math_test.cc -o CMakeFiles/math_test.dir/math_test.cc.s
 
 CMakeFiles/math_test.dir/math.cc.o: CMakeFiles/math_test.dir/flags.make
 CMakeFiles/math_test.dir/math.cc.o: /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc
 CMakeFiles/math_test.dir/math.cc.o: CMakeFiles/math_test.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/math_test.dir/math.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/math_test.dir/math.cc.o -MF CMakeFiles/math_test.dir/math.cc.o.d -o CMakeFiles/math_test.dir/math.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/math_test.dir/math.cc.o -MF CMakeFiles/math_test.dir/math.cc.o.d -o CMakeFiles/math_test.dir/math.cc.o -c /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc
 
 CMakeFiles/math_test.dir/math.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/math_test.dir/math.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc > CMakeFiles/math_test.dir/math.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc > CMakeFiles/math_test.dir/math.cc.i
 
 CMakeFiles/math_test.dir/math.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/math_test.dir/math.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc -o CMakeFiles/math_test.dir/math.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/asteroids/math.cc -o CMakeFiles/math_test.dir/math.cc.s
 
 # Object files for target math_test
 math_test_OBJECTS = \
