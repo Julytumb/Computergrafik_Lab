@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/geometry_test.dir/link.d"
   "CMakeFiles/geometry_test.dir/geometry.cc.o"
   "CMakeFiles/geometry_test.dir/geometry.cc.o.d"
   "CMakeFiles/geometry_test.dir/geometry_test.cc.o"

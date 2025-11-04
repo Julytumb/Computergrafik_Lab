@@ -8,10 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/julyt/Uni/5.Semester/Computergrafik/Computergrafik_Lab/Aufgabe_1/geometry/geometry.cc" "CMakeFiles/geometry_test.dir/geometry.cc.o" "gcc" "CMakeFiles/geometry_test.dir/geometry.cc.o.d"
-  "/mnt/c/Users/julyt/Uni/5.Semester/Computergrafik/Computergrafik_Lab/Aufgabe_1/geometry/geometry_test.cc" "CMakeFiles/geometry_test.dir/geometry_test.cc.o" "gcc" "CMakeFiles/geometry_test.dir/geometry_test.cc.o.d"
-  "/mnt/c/Users/julyt/Uni/5.Semester/Computergrafik/Computergrafik_Lab/Aufgabe_1/geometry/math.cc" "CMakeFiles/geometry_test.dir/math.cc.o" "gcc" "CMakeFiles/geometry_test.dir/math.cc.o.d"
-  "" "geometry_test" "gcc" "CMakeFiles/geometry_test.dir/link.d"
+  "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/geometry/geometry.cc" "CMakeFiles/geometry_test.dir/geometry.cc.o" "gcc" "CMakeFiles/geometry_test.dir/geometry.cc.o.d"
+  "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/geometry/geometry_test.cc" "CMakeFiles/geometry_test.dir/geometry_test.cc.o" "gcc" "CMakeFiles/geometry_test.dir/geometry_test.cc.o.d"
+  "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/geometry/math.cc" "CMakeFiles/geometry_test.dir/math.cc.o" "gcc" "CMakeFiles/geometry_test.dir/math.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
