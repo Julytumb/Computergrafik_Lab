@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/math_test.dir/link.d"
   "CMakeFiles/math_test.dir/math.cc.o"
   "CMakeFiles/math_test.dir/math.cc.o.d"
   "CMakeFiles/math_test.dir/math_test.cc.o"

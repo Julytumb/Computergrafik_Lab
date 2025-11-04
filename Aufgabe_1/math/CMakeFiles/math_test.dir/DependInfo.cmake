@@ -8,9 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/julyt/Uni/5.Semester/Computergrafik/Computergrafik_Lab/Aufgabe_1/math/math.cc" "CMakeFiles/math_test.dir/math.cc.o" "gcc" "CMakeFiles/math_test.dir/math.cc.o.d"
-  "/mnt/c/Users/julyt/Uni/5.Semester/Computergrafik/Computergrafik_Lab/Aufgabe_1/math/math_test.cc" "CMakeFiles/math_test.dir/math_test.cc.o" "gcc" "CMakeFiles/math_test.dir/math_test.cc.o.d"
-  "" "math_test" "gcc" "CMakeFiles/math_test.dir/link.d"
+  "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/math/math.cc" "CMakeFiles/math_test.dir/math.cc.o" "gcc" "CMakeFiles/math_test.dir/math.cc.o.d"
+  "/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/math/math_test.cc" "CMakeFiles/math_test.dir/math_test.cc.o" "gcc" "CMakeFiles/math_test.dir/math_test.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -1,3 +1,3 @@
-/mnt/c/Users/julyt/Uni/5.Semester/Computergrafik/Computergrafik_Lab/Aufgabe_1/math/CMakeFiles/math_test.dir
-/mnt/c/Users/julyt/Uni/5.Semester/Computergrafik/Computergrafik_Lab/Aufgabe_1/math/CMakeFiles/edit_cache.dir
-/mnt/c/Users/julyt/Uni/5.Semester/Computergrafik/Computergrafik_Lab/Aufgabe_1/math/CMakeFiles/rebuild_cache.dir
+/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/math/CMakeFiles/math_test.dir
+/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/math/CMakeFiles/edit_cache.dir
+/home/julytumb/projects/Computergrafik_Lab/Aufgabe_1/math/CMakeFiles/rebuild_cache.dir
