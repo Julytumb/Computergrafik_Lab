@@ -147,6 +147,7 @@ void SDL2Renderer::render(SpaceshipDebris * debris) {
   float scale =  0.2 * (SpaceshipDebris::TIME_TO_DELETE - debris->get_time_to_delete());
 
   // NEU: Implementiere einen Fading-Effekt für die Explosionsteile
+  // -> alpha steuert Transparenz -> methode berechnet Lebenszeit der Explosionsteile, d.h. sie verschwinden langsam
   uint8_t alpha = static_cast<uint8_t>(255.0f * (debris->get_time_to_delete() / SpaceshipDebris::TIME_TO_DELETE));
   
   // Setze die Farbe auf Pink (wie das Schiff), aber mit variablem Alpha-Wert
