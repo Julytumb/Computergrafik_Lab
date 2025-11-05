@@ -400,4 +400,43 @@ TEST(VECTOR, CrossVectorProduct7) {
   EXPECT_NEAR(0.0, cross[2], 0.00001);
 }
 
+TEST(VECTOR, MyTest_SquareOfLength_ZeroVector) {
+  Vector4df vector = {0.0, 0.0, 0.0, 0.0};
+  
+  EXPECT_NEAR(0.0, vector.square_of_length(), 0.00001);
+}
+
+TEST(VECTOR, MyTest_SquareOfLength_NegativeComponents) {
+  Vector3df vector = {-1.0, -2.0, -3.0};
+  EXPECT_NEAR(14.0, vector.square_of_length(), 0.00001);
+}
+
+TEST(VECTOR, MyTest_Length_ZeroVector) {
+  Vector2df vector = {0.0, 0.0};
+  
+  EXPECT_NEAR(0.0, vector.length(), 0.00001);
+}
+
+TEST(VECTOR, MyTest_Length_UnitVector) {
+  Vector2df vector(PI / 4.0f); 
+  
+  EXPECT_NEAR(1.0, vector.length(), 0.00001);
+}
+
+TEST(VECTOR, MyTest_ScalarVectorProduct_Orthogonal4D) {
+  Vector4df vector1 = {1.0, 0.0, 1.0, 0.0};
+  Vector4df vector2 = {0.0, 1.0, 0.0, 1.0};
+  
+  // Vektoren sind orthogonal, Skalarprodukt muss 0 sein.
+  EXPECT_NEAR(0.0, vector1 * vector2, 0.00001);
+}
+
+TEST(VECTOR, MyTest_ScalarVectorProduct_WithZero) {
+  Vector3df vector1 = {1.0, 2.0, 3.0};
+  Vector3df vector2 = {0.0, 0.0, 0.0};
+  
+  EXPECT_NEAR(0.0, vector1 * vector2, 0.00001);
+  EXPECT_NEAR(0.0, vector2 * vector1, 0.00001);
+}
+
 }
