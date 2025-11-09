@@ -85,7 +85,7 @@ template <class FLOAT, size_t N>
 bool Sphere<FLOAT,N>::intersects(Sphere<FLOAT, N> sphere) const {
   // Zwei Kugeln schneiden sich, wenn der Abstand ihrer Zentren
   // kleiner oder gleich der Summe ihrer Radien ist.
-  // Wir vergleichen wieder die quadrierten Werte, um die Wurzel-Berechnung zu sparen.
+  // wieder schneller ohne Wurzel
   FLOAT radius_sum = this->radius + sphere.radius;
   return (this->center - sphere.center).square_of_length() <= (radius_sum * radius_sum);
 }

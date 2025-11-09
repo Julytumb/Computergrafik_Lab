@@ -41,11 +41,11 @@ void SDL2Renderer::render(Spaceship * ship) { //Zeichnet das Raumschiff mit Flam
       }
        SDL_RenderDrawLines(renderer, points.data(), points.size());
     }
-  // NEU: Setze die Farbe für das Raumschiff auf Pink (Magenta)
+  // Setze die Farbe für das Raumschiff auf Pink
   SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0xFF, 0xFF);
   renderSpaceship(ship->get_position(), ship->get_angle());  
   }
-  // NEU: Setze die Farbe auf Weiß zurück für andere Objekte -> wichtig, damit nicht alles aus versehen pink wird
+  // Setze die Farbe auf Weiß zurück für andere Objekte -> wichtig, damit nicht alles aus versehen pink wird
   SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
 }
 
@@ -55,7 +55,7 @@ void SDL2Renderer::render(Saucer * saucer) { //Zeichnet das UFO
   
   std::array<SDL_Point, std::span{saucer_points}.size()> points;
 
-  // NEU: Blink Effekt für das UFO, basierend auf der X-Position
+  // Blink Effekt für das UFO, basierend auf der X-Position
   if (static_cast<int>(saucer->get_position()[0]) % 20 < 10) { //blinkt alle 10 Frames
     // Setze Farbe auf Grün
     SDL_SetRenderDrawColor(renderer, 0x00, 0xFF, 0x00, 0xFF);
@@ -77,7 +77,7 @@ void SDL2Renderer::render(Saucer * saucer) { //Zeichnet das UFO
   }
   SDL_RenderDrawLines(renderer, points.data(), points.size());
 
-  // NEU: Setze die Farbe auf Weiß zurück
+  // Setze die Farbe auf Weiß zurück
   SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
 }
 
@@ -117,7 +117,7 @@ void SDL2Renderer::render(Asteroid * asteroid) {
  
   SDL_Point points[std::span{asteroids_points4}.size()];
 
-  //NEU: Setze die Farbe für Asteroiden auf Rot
+  // Setze die Farbe für Asteroiden auf Rot
   SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x00, 0xFF);
   
   float scale = (asteroid->get_size() == 3 ? 1.0 : ( asteroid->get_size() == 2 ? 0.5 : 0.25 ));
@@ -128,7 +128,7 @@ void SDL2Renderer::render(Asteroid * asteroid) {
   }
   SDL_RenderDrawLines(renderer, points, size);
 
-  // NEU: Setze die Farbe auf Weiß zurück
+  // Setze die Farbe auf Weiß zurück
   SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
 }
 
@@ -146,7 +146,7 @@ void SDL2Renderer::render(SpaceshipDebris * debris) {
   std::array<SDL_Point, 4> points;
   float scale =  0.2 * (SpaceshipDebris::TIME_TO_DELETE - debris->get_time_to_delete());
 
-  // NEU: Implementiere einen Fading-Effekt für die Explosionsteile
+  // Implementiere einen Fading-Effekt für die Explosionsteile
   // -> alpha steuert Transparenz -> methode berechnet Lebenszeit der Explosionsteile, d.h. sie verschwinden langsam
   uint8_t alpha = static_cast<uint8_t>(255.0f * (debris->get_time_to_delete() / SpaceshipDebris::TIME_TO_DELETE));
   
@@ -162,7 +162,7 @@ void SDL2Renderer::render(SpaceshipDebris * debris) {
       SDL_RenderDrawLine(renderer, points[0].x, points[0].y, points[1].x, points[1].y );    
     }
   }
-  // NEU: Setze die Farbe auf Weiß zurück (mit vollem Alpha)
+  // Setze die Farbe auf Weiß zurück (mit vollem Alpha)
   SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);                        
 }
 
@@ -172,10 +172,10 @@ void SDL2Renderer::render(Debris * debris) {
   static SDL_Point point;
   Vector2df position = debris->get_position();
 
-  // NEU: Implementiere einen Fading-Effekt für die UFO/Asteroid-Explosion
+  // Implementiere einen Fading-Effekt für die UFO/Asteroid-Explosion
   uint8_t alpha = static_cast<uint8_t>(255.0f * (debris->get_time_to_delete() / Debris::TIME_TO_DELETE));
 
-  // Setze die Farbe auf Gelb (passend zur Score-Farbe), mit variablem Alpha
+  // Setze die Farbe auf Gelb mit variablem Alpha (transparenz)
   SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0x00, alpha);
 
   for (size_t i = 0; i < std::span{debris_points}.size(); i++) {
@@ -183,7 +183,7 @@ void SDL2Renderer::render(Debris * debris) {
     point.y = (Debris::TIME_TO_DELETE - debris->get_time_to_delete()) * debris_points[i].y + position[1];
     SDL_RenderDrawPoint(renderer, point.x, point.y);
   }
-  // NEU: Setze die Farbe auf Weiß zurück
+  // Setze die Farbe auf Weiß zurück
   SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
 }
 
@@ -192,14 +192,14 @@ void SDL2Renderer::renderFreeShips() {  //UI Element: Zeichnet die verbleibenden
   constexpr float FREE_SHIP_Y = 64;
   Vector2df position = {FREE_SHIP_X, FREE_SHIP_Y};
 
-  // NEU: Setze die Farbe für die freien Schiffe auf Pink
+  // Setze die Farbe für die freien Schiffe auf Pink
   SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0xFF, 0xFF);
   
   for (int i = 0; i < game.get_no_of_ships(); i++) {
     renderSpaceship( position, -PI / 2.0 );
     position[0] += 20.0;
   }
-  // NEU: Setze die Farbe auf Weiß zurück
+  // Setze die Farbe auf Weiß zurück
   SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
 }
 
