@@ -1,0 +1,320 @@
+#include "math.h"
+#include "geometry.h"
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <fstream>
+#include <memory> 
+#include <cmath> // Für std::sqrt
+
+// --- Datenstrukturen ---
+
+struct Material {
+    Vector3df color;
+    float reflection; // 0.0 = matt, 1.0 = perfekter Spiegel
+};
+
+// Abstrakte Basisklasse
+class Object {
+public:
+    Material material;
+    Object(Material m) : material(m) {}
+    virtual ~Object() = default;
+    
+    virtual bool intersects(const Ray3df& ray, Intersection_Context<float, 3u>& context) const = 0;
+};
+
+// Kugel
+class SphereObject : public Object {
+private:
+    Sphere3df sphere;
+public:
+    SphereObject(Material m, Vector3df center, float radius)
+        : Object(m), sphere(center, radius) {}
+
+    bool intersects(const Ray3df& ray, Intersection_Context<float, 3u>& context) const override {
+        return sphere.intersects(ray, context);
+    }
+};
+
+// Dreieck (mit Normale-Interpolation)
+class TriangleObject : public Object, public Triangle3df {
+public:
+    TriangleObject(Material m, Vector3df a, Vector3df b, Vector3df c)
+        : Object(m), Triangle3df(a, b, c) {}
+
+    bool intersects(const Ray3df& ray, Intersection_Context<float, 3u>& context) const override {
+        if (Triangle3df::intersects(ray, context)) {
+            // Baryzentrische Interpolation der Normalen
+            float u = context.u;
+            float v = context.v;
+            float w = 1.0f - u - v;
+
+            // Formel: n = w*na + u*nb + v*nc
+            // Achtung: Reihenfolge float * Vector beachten!
+            Vector3df interpolatedN = (w * na) + (u * nb) + (v * nc);
+            interpolatedN.normalize();
+            context.normal = interpolatedN;
+            return true;
+        }
+        return false;
+    }
+};
+
+// Szene
+using Scene = std::vector<std::unique_ptr<Object>>;
+
+struct PointLight {
+    Vector3df position;
+    Vector3df color;
+};
+using Lights = std::vector<PointLight>;
+
+
+// --- Bildschirm & Kamera ---
+
+class Screen {
+private:
+    int width, height;
+    std::vector<Vector3df> pixels;
+public:
+    Screen(int w, int h) 
+        : width(w), height(h), pixels(w * h, Vector3df({0.0f, 0.0f, 0.0f})) {}
+
+    void setPixel(int x, int y, Vector3df color) {
+        if (x >= 0 && x < width && y >= 0 && y < height) {
+            pixels[y * width + x] = color;
+        }
+    }
+
+    void save(const std::string& filename) {
+        std::ofstream file(filename);
+        file << "P3\n" << width << " " << height << "\n255\n";
+        for (const auto& pixel : pixels) {
+            // FIX: Gamma-Korrektur (Gamma 2.0 entspricht Wurzelziehen)
+            // Das macht das Bild deutlich heller und realistischer auf Monitoren.
+            float r_corr = std::sqrt(pixel[0]);
+            float g_corr = std::sqrt(pixel[1]);
+            float b_corr = std::sqrt(pixel[2]);
+
+            // Clamping und Skalierung auf 0-255
+            int r = static_cast<int>(std::max(0.0f, std::min(1.0f, r_corr)) * 255);
+            int g = static_cast<int>(std::max(0.0f, std::min(1.0f, g_corr)) * 255);
+            int b = static_cast<int>(std::max(0.0f, std::min(1.0f, b_corr)) * 255);
+            file << r << " " << g << " " << b << "\n";
+        }
+        std::cout << "Bild gespeichert: " << filename << std::endl;
+    }
+};
+
+class Camera {
+private:
+    Vector3df eye, lookDir, up;
+    float aspectRatio;
+public:
+    Camera(Vector3df pos, float aspect) 
+        : eye(pos), lookDir({0.0f, 0.0f, -1.0f}), up({0.0f, 1.0f, 0.0f}), aspectRatio(aspect) {}
+
+    Ray3df getRay(int x, int y, int w, int h) const {
+        float u = (2.0f * (x + 0.5f) / w) - 1.0f;
+        float v = 1.0f - (2.0f * (y + 0.5f) / h);
+        u *= aspectRatio;
+        Vector3df rayDir({u, v, -1.0f}); 
+        rayDir.normalize();
+        return Ray3df{eye, rayDir};
+    }
+};
+
+
+// --- Rekursive Raytracing Funktion ---
+
+const int MAX_DEPTH = 5;
+
+Vector3df trace(const Ray3df& ray, const Scene& scene, const Lights& lights, int depth) {
+    // Abbruchbedingung
+    if (depth > MAX_DEPTH) {
+        return Vector3df({0.0f, 0.0f, 0.0f});
+    }
+
+    Intersection_Context<float, 3u> currentContext;
+    Intersection_Context<float, 3u> bestContext;
+    const Object* hitObject = nullptr;
+    float closestT = 1000000.0f;
+
+    // 1. Nächstes Objekt finden
+    for (const auto& obj : scene) {
+        if (obj->intersects(ray, currentContext)) {
+            if (currentContext.t > 0.001f && currentContext.t < closestT) {
+                closestT = currentContext.t;
+                hitObject = obj.get(); 
+                bestContext = currentContext;
+            }
+        }
+    }
+
+    // Kein Treffer -> Hintergrund
+    if (hitObject == nullptr) {
+        return Vector3df({0.1f, 0.1f, 0.1f});
+    }
+
+    Vector3df finalColor({0.0f, 0.0f, 0.0f});
+    Vector3df N = bestContext.normal;
+    Vector3df P = bestContext.intersection;
+
+    // 2. Beleuchtung (Schatten + Lambert)
+    for (const auto& light : lights) {
+        Vector3df L = light.position - P;
+        float distToLight = L.length();
+        L.normalize();
+
+        bool inShadow = false;
+        
+        // FIX: Shadow Bias & Reihenfolge
+        // Startpunkt des Schattenstrahls leicht entlang der Normalen verschieben.
+        // Verhindert "Shadow Acne" (schwarze Sprenkel).
+        // Wir nutzen 0.01f als Bias.
+        Vector3df shadowOrigin = P + (0.01f * N); 
+        Ray3df shadowRay{ shadowOrigin, L };
+        
+        Intersection_Context<float, 3u> shadowCtx;
+
+        for (const auto& obj : scene) {
+            if (obj->intersects(shadowRay, shadowCtx)) {
+                // Ist ein Objekt zwischen uns und der Lichtquelle?
+                if (shadowCtx.t > 0.001f && shadowCtx.t < distToLight) {
+                    inShadow = true;
+                    break;
+                }
+            }
+        }
+
+        if (!inShadow) {
+            float cosTheta = N * L;
+            if (cosTheta > 0.0f) {
+                // Lambertian Shading
+                float r = hitObject->material.color[0] * light.color[0] * cosTheta;
+                float g = hitObject->material.color[1] * light.color[1] * cosTheta;
+                float b = hitObject->material.color[2] * light.color[2] * cosTheta;
+                finalColor = finalColor + Vector3df({r, g, b});
+            }
+        }
+    }
+
+    // 3. Reflexion (Rekursion)
+    if (hitObject->material.reflection > 0.0f) {
+        Vector3df R = ray.direction.get_reflective(N);
+        R.normalize();
+
+        // FIX: Reflection Bias & Reihenfolge
+        // Auch hier den Startpunkt verschieben, um Selbstschnitt zu vermeiden.
+        Vector3df reflectOrigin = P + (0.01f * N); 
+        Ray3df reflectRay{ reflectOrigin, R };
+        
+        Vector3df reflectedColor = trace(reflectRay, scene, lights, depth + 1);
+
+        // Einfaches Mischen: (1 - ref) * Diffus + ref * Reflektion
+        float refFactor = hitObject->material.reflection;
+        
+        float r = finalColor[0] * (1.0f - refFactor) + reflectedColor[0] * refFactor;
+        float g = finalColor[1] * (1.0f - refFactor) + reflectedColor[1] * refFactor;
+        float b = finalColor[2] * (1.0f - refFactor) + reflectedColor[2] * refFactor;
+        
+        finalColor = Vector3df({r, g, b});
+    }
+
+    return finalColor;
+}
+
+
+// --- Main ---
+
+int main(void) {
+    std::cout << "Rendering Cornell Box..." << std::endl;
+
+    // Materialien
+    Material matRed   { Vector3df({0.8f, 0.1f, 0.1f}), 0.0f };
+    Material matGreen { Vector3df({0.1f, 0.8f, 0.1f}), 0.0f };
+    Material matWhite { Vector3df({0.8f, 0.8f, 0.8f}), 0.0f };
+    Material matMirror{ Vector3df({0.1f, 0.1f, 0.1f}), 0.8f }; 
+    Material matBright{ Vector3df({0.9f, 0.9f, 0.2f}), 0.2f }; 
+
+    Scene scene;
+
+    // --- Cornell Box Geometrie ---
+    
+    // Linke Wand (Rot)
+    scene.push_back(std::make_unique<TriangleObject>(matRed,
+        Vector3df({-2.0f, -2.0f, -4.0f}), Vector3df({-2.0f, -2.0f, -10.0f}), Vector3df({-2.0f,  2.0f, -10.0f})
+    ));
+    scene.push_back(std::make_unique<TriangleObject>(matRed,
+        Vector3df({-2.0f, -2.0f, -4.0f}), Vector3df({-2.0f,  2.0f, -10.0f}), Vector3df({-2.0f,  2.0f, -4.0f})
+    ));
+
+    // Rechte Wand (Grün)
+    scene.push_back(std::make_unique<TriangleObject>(matGreen,
+        Vector3df({ 2.0f, -2.0f, -4.0f}), Vector3df({ 2.0f,  2.0f, -10.0f}), Vector3df({ 2.0f, -2.0f, -10.0f})
+    ));
+    scene.push_back(std::make_unique<TriangleObject>(matGreen,
+        Vector3df({ 2.0f, -2.0f, -4.0f}), Vector3df({ 2.0f,  2.0f, -4.0f}),  Vector3df({ 2.0f,  2.0f, -10.0f})
+    ));
+
+    // Rückwand (Weiß)
+    scene.push_back(std::make_unique<TriangleObject>(matWhite,
+        Vector3df({-2.0f, -2.0f, -10.0f}), Vector3df({ 2.0f, -2.0f, -10.0f}), Vector3df({ 2.0f,  2.0f, -10.0f})
+    ));
+    scene.push_back(std::make_unique<TriangleObject>(matWhite,
+        Vector3df({-2.0f, -2.0f, -10.0f}), Vector3df({ 2.0f,  2.0f, -10.0f}), Vector3df({-2.0f,  2.0f, -10.0f})
+    ));
+
+    // Boden (Weiß)
+    scene.push_back(std::make_unique<TriangleObject>(matWhite,
+        Vector3df({-2.0f, -2.0f, -4.0f}), Vector3df({ 2.0f, -2.0f, -4.0f}), Vector3df({ 2.0f, -2.0f, -10.0f})
+    ));
+    scene.push_back(std::make_unique<TriangleObject>(matWhite,
+        Vector3df({-2.0f, -2.0f, -4.0f}), Vector3df({ 2.0f, -2.0f, -10.0f}), Vector3df({-2.0f, -2.0f, -10.0f})
+    ));
+
+    // Decke (Weiß)
+    scene.push_back(std::make_unique<TriangleObject>(matWhite,
+        Vector3df({-2.0f,  2.0f, -4.0f}), Vector3df({ 2.0f,  2.0f, -10.0f}), Vector3df({ 2.0f,  2.0f, -4.0f})
+    ));
+    scene.push_back(std::make_unique<TriangleObject>(matWhite,
+        Vector3df({-2.0f,  2.0f, -4.0f}), Vector3df({-2.0f,  2.0f, -10.0f}), Vector3df({ 2.0f,  2.0f, -10.0f})
+    ));
+
+    // Objekte
+    scene.push_back(std::make_unique<SphereObject>(
+        matMirror, Vector3df({-1.0f, -1.0f, -7.0f}), 1.0f
+    ));
+
+    scene.push_back(std::make_unique<SphereObject>(
+        matBright, Vector3df({ 1.0f, -1.2f, -6.0f}), 0.8f
+    ));
+
+    // Lichtquelle (Oben mittig)
+    Lights lights;
+    lights.push_back(PointLight{ 
+        Vector3df({0.0f, 1.8f, -7.0f}), 
+        Vector3df({1.0f, 1.0f, 1.0f})     
+    });
+
+    int width = 800;
+    int height = 600;
+    float aspect = static_cast<float>(width) / height;
+    
+    Screen screen(width, height);
+    Camera camera(Vector3df({0.0f, 0.0f, 0.0f}), aspect);
+
+    // Loop über alle Pixel
+    for (int y = 0; y < height; ++y) {
+        for (int x = 0; x < width; ++x) {
+            Ray3df ray = camera.getRay(x, y, width, height);
+            Vector3df pixelColor = trace(ray, scene, lights, 0);
+            screen.setPixel(x, y, pixelColor);
+        }
+    }
+
+    screen.save("cornell_box.ppm");
+
+    return 0;   
+}

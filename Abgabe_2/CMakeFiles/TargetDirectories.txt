@@ -1,0 +1,3 @@
+/home/julytumb/projects/Computergrafik_Lab/Abgabe_2/CMakeFiles/raytracer.dir
+/home/julytumb/projects/Computergrafik_Lab/Abgabe_2/CMakeFiles/edit_cache.dir
+/home/julytumb/projects/Computergrafik_Lab/Abgabe_2/CMakeFiles/rebuild_cache.dir
