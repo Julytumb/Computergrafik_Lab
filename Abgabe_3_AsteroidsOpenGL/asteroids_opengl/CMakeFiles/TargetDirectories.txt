@@ -1,0 +1,9 @@
+/home/julytumb/projects/Computergrafik_Lab/Abgabe_3_AsteroidsOpenGL/asteroids_opengl/CMakeFiles/main_game.dir
+/home/julytumb/projects/Computergrafik_Lab/Abgabe_3_AsteroidsOpenGL/asteroids_opengl/CMakeFiles/math_test.dir
+/home/julytumb/projects/Computergrafik_Lab/Abgabe_3_AsteroidsOpenGL/asteroids_opengl/CMakeFiles/matrix_test.dir
+/home/julytumb/projects/Computergrafik_Lab/Abgabe_3_AsteroidsOpenGL/asteroids_opengl/CMakeFiles/geometry_test.dir
+/home/julytumb/projects/Computergrafik_Lab/Abgabe_3_AsteroidsOpenGL/asteroids_opengl/CMakeFiles/physics_test.dir
+/home/julytumb/projects/Computergrafik_Lab/Abgabe_3_AsteroidsOpenGL/asteroids_opengl/CMakeFiles/game_test.dir
+/home/julytumb/projects/Computergrafik_Lab/Abgabe_3_AsteroidsOpenGL/asteroids_opengl/CMakeFiles/test.dir
+/home/julytumb/projects/Computergrafik_Lab/Abgabe_3_AsteroidsOpenGL/asteroids_opengl/CMakeFiles/edit_cache.dir
+/home/julytumb/projects/Computergrafik_Lab/Abgabe_3_AsteroidsOpenGL/asteroids_opengl/CMakeFiles/rebuild_cache.dir
