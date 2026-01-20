@@ -1,0 +1,4 @@
+/home/julytumb/projects/Computergrafik_Lab/Abgabe_3_Asteroids3D/viewer/CMakeFiles/viewer.dir
+/home/julytumb/projects/Computergrafik_Lab/Abgabe_3_Asteroids3D/viewer/CMakeFiles/wavefront_test.dir
+/home/julytumb/projects/Computergrafik_Lab/Abgabe_3_Asteroids3D/viewer/CMakeFiles/edit_cache.dir
+/home/julytumb/projects/Computergrafik_Lab/Abgabe_3_Asteroids3D/viewer/CMakeFiles/rebuild_cache.dir
