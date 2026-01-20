@@ -10,7 +10,6 @@
 #include "game.h"
 #include "renderer.h"
 #include "debug.h"
-#include "wavefront.h"
 #include <array>
 #include <vector>
 #include <memory>
@@ -92,12 +91,7 @@ public:
   virtual void render();
   
   virtual void exit(); 
-
-private:
-  WavefrontObject spaceship_model_;
-  WavefrontObject asteroid_model_;
-  WavefrontObject torpedo_model_;
-  WavefrontObject saucer_model_;
+  
 };
 
 #endif
