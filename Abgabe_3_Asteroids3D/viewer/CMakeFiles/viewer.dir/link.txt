@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/viewer.dir/viewer.cc.o CMakeFiles/viewer.dir/wavefront.cc.o -o viewer  -lSDL2 -lGL -lGLEW 
