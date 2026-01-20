@@ -516,8 +516,69 @@ void OpenGLRenderer::render() {
   }
 
   debug(2, "render all views");
-  for (auto & view : views) {
-    view->render( world_transformation );
+  // for (auto & view : views) {
+  //   view->render( world_transformation );
+  // }
+
+  // -----------------------------------------------------------------------
+  // AUFGABE 1: 
+  // -----------------------------------------------------------------------
+  SquareMatrix4df view_transformation = world_transformation;
+
+  // Wenn das Schiff existiert -> Kamera zum Schiff verschieben
+  if (game.ship_exists()) {
+      TypedBody* ship = game.get_ship();
+      Vector2df ship_pos = ship->get_position();
+
+      // Schiff ist in Mitte des Fensters (1024/2, 768/2)
+      float target_x = 512.0f;
+      float target_y = 384.0f;
+
+      // Verschiebung berechnen
+      float dx = target_x - ship_pos[0];
+      float dy = target_y - ship_pos[1];
+
+      // Translationsmatrix erstellen
+      SquareMatrix4df camera_translation = {
+          {1.0f, 0.0f, 0.0f, 0.0f},
+          {0.0f, 1.0f, 0.0f, 0.0f},
+          {0.0f, 0.0f, 1.0f, 0.0f},
+          {dx,   dy,   0.0f, 1.0f}
+      };
+
+      // Kamera-Verschiebung in View-Matrix einrechnen
+      view_transformation = view_transformation * camera_translation;
+  }
+
+  // -----------------------------------------------------------------------
+  // AUFGABE 2: 
+  // -----------------------------------------------------------------------
+  
+  //9 Positionen für die Kacheln
+  std::vector<Vector2df> tile_positions = {
+      {0.0f, 0.0f},      {1024.0f, 0.0f},      {-1024.0f, 0.0f},
+      {0.0f, 768.0f},    {1024.0f, 768.0f},    {-1024.0f, 768.0f},
+      {0.0f, -768.0f},   {1024.0f, -768.0f},   {-1024.0f, -768.0f}
+  };
+
+  for (const auto& offset : tile_positions) {
+      
+      // Matrix für die Kachel-Verschiebung
+      SquareMatrix4df tile_translation = { 
+          {1.0f, 0.0f, 0.0f, 0.0f},
+          {0.0f, 1.0f, 0.0f, 0.0f},
+          {0.0f, 0.0f, 1.0f, 0.0f},
+          {offset[0], offset[1], 0.0f, 1.0f} 
+      };
+
+      // Erst Kamera, dann Kachel-Verschiebung anwenden
+      // Reihenfolge der Multiplikation: ViewTrans * TileTrans
+      SquareMatrix4df current_transform = view_transformation * tile_translation;
+
+      // Alle Spielobjekte für diese Kachel zeichnen
+      for (auto & view : views) {
+        view->render( current_transform );
+      }
   }
   
   renderFreeShips(world_transformation);
@@ -525,6 +586,7 @@ void OpenGLRenderer::render() {
 
   SDL_GL_SwapWindow(window);
   debug(2, "render() exit.");
+
 }
 
 void OpenGLRenderer::exit() {

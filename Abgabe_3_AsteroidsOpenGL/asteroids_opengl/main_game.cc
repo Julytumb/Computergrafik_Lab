@@ -28,7 +28,7 @@ int main(void) {
   Game game{};
   SDL2GameController controller = SDL2GameController{game};
   //std::unique_ptr<Renderer> renderer = std::make_unique<SDL2Renderer>(game, "Asteroids");
-  std::unique_ptr<Renderer> renderer = std::make_unique<OpenGLRenderer>(game, "Asteroids");
+  std::unique_ptr<Renderer> renderer = std::make_unique<OpenGLRenderer>(game, "Asteroids", 1280, 960);
 
   renderer->init();
   do {
