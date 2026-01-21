@@ -74,41 +74,77 @@ void WavefrontImporter::parse_vertex_data() {
 
 
 // no texture coordinates supported
-void WavefrontImporter::parse_face() {
-  // f v1//v1n v2//v2n v3//v3n 
-  // f v1 v2 v3
-  Face face;
-  size_t v1, v2, v3,
-         vn1 = 0, vn2, vn3;
+// void WavefrontImporter::parse_face() {
+//   // f v1//v1n v2//v2n v3//v3n 
+//   // f v1 v2 v3
+//   Face face;
+//   size_t v1, v2, v3,
+//          vn1 = 0, vn2, vn3;
 
-  in >> v1;
-  if (in.peek() == '/') in.ignore(); // no texture coordinates supported
-  if (in.peek() == '/') { in.ignore(); in >> vn1;}
-  in >> v2;
-  if (in.peek() == '/') in.ignore(); 
-  if (in.peek() == '/') { in.ignore(); in >> vn2;}
-  in >> v3;
-  if (in.peek() == '/') in.ignore(); 
-  if (in.peek() == '/') { in.ignore(); in >> vn3;}
+//   in >> v1;
+//   if (in.peek() == '/') in.ignore(); // no texture coordinates supported
+//   if (in.peek() == '/') { in.ignore(); in >> vn1;}
+//   in >> v2;
+//   if (in.peek() == '/') in.ignore(); 
+//   if (in.peek() == '/') { in.ignore(); in >> vn2;}
+//   in >> v3;
+//   if (in.peek() == '/') in.ignore(); 
+//   if (in.peek() == '/') { in.ignore(); in >> vn3;}
  
-  if (vn1 == 0) {
-    warning("no normals given");
-    // calculate normal not done
-    Normal normal = {1.0f, 1.0f, 1.0f};
-    face.reference_groups.push_back( { vertices.at(v1 - 1), normal } );
-    face.reference_groups.push_back( { vertices.at(v2 - 1), normal } );
-    face.reference_groups.push_back( { vertices.at(v3 - 1), normal } );
-  } else {
-    face.reference_groups.push_back( { vertices.at(v1 - 1), normals.at(vn1 - 1) } );
-    face.reference_groups.push_back( { vertices.at(v2 - 1), normals.at(vn2 - 1) } );
-    face.reference_groups.push_back( { vertices.at(v3 - 1), normals.at(vn3 - 1) } );
+//   if (vn1 == 0) {
+//     warning("no normals given");
+//     // calculate normal not done
+//     Normal normal = {1.0f, 1.0f, 1.0f};
+//     face.reference_groups.push_back( { vertices.at(v1 - 1), normal } );
+//     face.reference_groups.push_back( { vertices.at(v2 - 1), normal } );
+//     face.reference_groups.push_back( { vertices.at(v3 - 1), normal } );
+//   } else {
+//     face.reference_groups.push_back( { vertices.at(v1 - 1), normals.at(vn1 - 1) } );
+//     face.reference_groups.push_back( { vertices.at(v2 - 1), normals.at(vn2 - 1) } );
+//     face.reference_groups.push_back( { vertices.at(v3 - 1), normals.at(vn3 - 1) } );
+//   }
+//   if (current_material != nullptr) {
+//     face.material = current_material;
+//   } else {
+//     warning("no material set for face");
+//   }
+//   faces.push_back( face );
+// }
+void WavefrontImporter::parse_face() {
+  Face face;
+  size_t v[3];
+  size_t vn[3] = {0, 0, 0};
+  size_t vt_dummy = 0; 
+
+  for (int i = 0; i < 3; i++) {
+    in >> v[i];
+
+    if (in.peek() == '/') {
+      in.ignore(); // Erstes '/' weg
+      if (in.peek() != '/') { // Textur-Koordinate vorhanden?
+         in >> vt_dummy; // Lesen und ignorieren
+      }
+      if (in.peek() == '/') { // Normalen-Koordinate folgt?
+        in.ignore(); // Zweites '/' weg
+        in >> vn[i];
+      }
+    }
   }
+
+  for (int i = 0; i < 3; i++) {
+    // Normalen-Index 0 abfangen (falls Datei kaputt oder keine Normale)
+    if (vn[i] == 0) {
+        Normal fallback = {0.0f, 0.0f, 1.0f}; // Zeigt nach oben/vorn
+        face.reference_groups.push_back({vertices.at(v[i] - 1), fallback});
+    } else {
+        face.reference_groups.push_back({vertices.at(v[i] - 1), normals.at(vn[i] - 1)});
+    }
+  }
+
   if (current_material != nullptr) {
     face.material = current_material;
-  } else {
-    warning("no material set for face");
-  }
-  faces.push_back( face );
+  } 
+  faces.push_back(face);
 }
 
 void WavefrontImporter::parse_use_material() {

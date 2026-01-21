@@ -10,10 +10,15 @@
 #include "game.h"
 #include "renderer.h"
 #include "debug.h"
+#include "wavefront.h"
 #include <array>
 #include <vector>
 #include <memory>
 
+struct ModelData{
+  GLuint vbo;
+  size_t vertex_count;
+};
 // stores information on how to render a specific vertex buffer (vbo)
 // the vob's layout used by the shaderProgram is hard coded into the render() method.
 class OpenGLView {
@@ -65,9 +70,16 @@ class OpenGLRenderer : public Renderer {
   SDL_GLContext context;
   unsigned int shaderProgram;
   std::vector< std::unique_ptr<TypedBodyView > > views;
-  GLuint * vbos;
+
+  std::map<std::string, ModelData> models;
+  GLuint digit_vbos[10];
+
+  //GLuint * vbos;
   std::unique_ptr<OpenGLView> spaceship_view;
   std::array< std::unique_ptr<OpenGLView>, 10> digit_views;
+  
+  void loadModel(std::string name, std::string filename);
+  
   void createVbos();
   void createSpaceShipView();
   void createDigitViews();
@@ -84,7 +96,7 @@ public:
   OpenGLRenderer(Game & game, std::string title, int window_width = 1024, int window_height = 768)
     : Renderer(game), title(title), window_width(window_width), window_height(window_height) { }
   
-  ~OpenGLRenderer() { delete [] vbos; }
+  ~OpenGLRenderer();
   
   virtual bool init();
   

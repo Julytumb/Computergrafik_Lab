@@ -8,6 +8,7 @@
 #include "game_controller.h"
 #include "sdl2_game_controller.h"
 #include <memory>
+#include <clocale>
 
 #include "debug.h"
 
@@ -24,6 +25,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 // sets up the model, view, and controller objects
 // main itself is a controller containing the game main loop
 int main(void) {
+  std::setlocale(LC_ALL, "C");
   Timer timer;
   Game game{};
   SDL2GameController controller = SDL2GameController{game};
